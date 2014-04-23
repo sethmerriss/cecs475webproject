@@ -64,6 +64,11 @@ namespace Bug2Bug.ProtectedContent
          // set titlesQuery as the titlesGridView's data source
          titlesGridView.DataSource = titlesQuery;
          titlesGridView.DataBind(); // displays query results  
+      }
+
+      protected void titlesGridView_SelectedIndexChanged(object sender, EventArgs e)
+      {
+
       } // end method authorsDropDownList_SelectedIndexChanged
    } // end class Books
 } // end namespace Bug2Bug.ProtectedContent
