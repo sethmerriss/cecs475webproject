@@ -13,7 +13,8 @@
       <asp:GridView ID="titlesGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="titlesGridView_SelectedIndexChanged">
          <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
           <Columns>
-              <asp:HyperLinkField Text="Select" NavigateUrl="~/AddToCart.aspx?productID=<%#:titlesGridView. %>" />         
+              <asp:ButtonField Text="Add To Cart" CommandName="Add To Cart" />
+                      
           </Columns>
          <EditRowStyle BackColor="#999999" />
          <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

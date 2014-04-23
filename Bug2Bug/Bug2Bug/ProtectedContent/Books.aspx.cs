@@ -3,6 +3,7 @@
 using System;
 using System.Data.Entity;
 using System.Linq;
+using System.Web.UI.WebControls;
 
 namespace Bug2Bug.ProtectedContent
 {
@@ -66,6 +67,19 @@ namespace Bug2Bug.ProtectedContent
          titlesGridView.DataBind(); // displays query results  
       }
 
+      protected void grdtest_RowCommand(object sender, GridViewCommandEventArgs e)
+      {
+          if (e.CommandName == "Add To Cart")
+          {
+              int Index = Convert.ToInt32(e.CommandArgument);
+              GridViewRow row = titlesGridView.Rows[Index];
+              int id = Convert.ToInt32(row.Cells[0].Text);
+              Session["row"] = row;
+              //if you want to select the text of different cells like `coursename` and `coursecode` then assign their cell number,it always start from 0.
+              // Now you have the data of selected row.
+              // Do what ever you want.
+          }
+      }
       protected void titlesGridView_SelectedIndexChanged(object sender, EventArgs e)
       {
 

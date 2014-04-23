@@ -143,3 +143,4 @@ C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\DotNet
 C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\DotNetOpenAuth.AspNet.xml
 C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\Microsoft.AspNet.Membership.OpenAuth.xml
 C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\obj\Debug\Bug2Bug.csprojResolveAssemblyReference.cache

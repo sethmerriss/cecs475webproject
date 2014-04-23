@@ -13,8 +13,9 @@ namespace Bug2Bug
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            GridViewRow row = (GridViewRow) Session["row"];
             string rawId = Request.QueryString["ProductID"];
-            int productId;
+            int productId = int.Parse(row.Cells[0].Text);
             if (!String.IsNullOrEmpty(rawId) && int.TryParse(rawId, out productId))
             {
                 using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
