@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <!-- The URL for the ad image -->
+    <ImageUrl>images/Koala.jpg</ImageUrl>
+    <!-- The URL the ad redirects the user to -->
+    <NavigateUrl>http://www.kentuckysportsradio.com</NavigateUrl>
+    <!-- The alternate text for the image -->
+    <AlternateText>Visit Kentucky Sports Radio's Site</AlternateText>
+    <!-- The relative number of times this ad should appear -->
+    <!-- compared to the others -->
+    <Impressions>80</Impressions>
+    <!-- The topic of this ad (used for filtering) -->
+    <Keyword>ProductInfo</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>images/Jellyfish.jpg</ImageUrl>
+    <NavigateUrl>http://www.xkcd.com</NavigateUrl>
+    <AlternateText>Daily Internet Comic</AlternateText>
+    <Impressions>40</Impressions>
+    <Keyword>Support</Keyword>
+  </Ad>
+  <Ad>
+    <ImageUrl>images/Lighthouse.jpg</ImageUrl>
+    <NavigateUrl>http://comics.ign.com</NavigateUrl>
+    <AlternateText>Support for comic nerds</AlternateText>
+    <Impressions>40</Impressions>
+    <Keyword>Support</Keyword>
+  </Ad>
+</Advertisements>
