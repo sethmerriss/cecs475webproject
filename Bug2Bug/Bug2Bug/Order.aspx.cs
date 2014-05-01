@@ -90,7 +90,16 @@ namespace Bug2Bug
 
         protected void CheckoutBtn_Click(object sender, EventArgs e)
         {
+            
+            using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
+            {
+                List<CartItem> cartItems = new List<CartItem>();
+                cartItems = usersShoppingCart.GetCartItems();
+                Session["cartItems"] = cartItems;
+                Session["orderTotal"] = LabelTotalText.Text;
 
+                Response.Redirect("~/Checkout.aspx");
+            }
         }
     }
 }
