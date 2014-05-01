@@ -66,11 +66,8 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a id="A1" runat="server" href="~/ProtectedContent/Books">Books</a></li>
                         <li><a id="A3" runat="server" href="~/Guestbook">Guestbook</a></li>
-<<<<<<< HEAD
                         <li><a id="A4" runat="server" href="~/Order.aspx">Shopping Cart</a></li>
-=======
                         <li><a id="A4" runat="server" href="~/AddToCart">Shopping Cart</a></li>
->>>>>>> c81ede5dc4aa2e18ab4e121170430e5cf970929f
                         <li><a id="A2" runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
