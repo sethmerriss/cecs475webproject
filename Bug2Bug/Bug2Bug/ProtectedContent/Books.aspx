@@ -6,12 +6,12 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <p>
       Select author:&nbsp;
-      <asp:DropDownList ID="authorsDropDownList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="authorsDropDownList_SelectedIndexChanged">
+      <asp:DropDownList ID="authorsDropDownList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="authorsDropDownList_SelectedIndexChanged" >
       </asp:DropDownList>
    </p>
 <p>
       <asp:Label ID="Test" runat="server" Text="Label"></asp:Label>
-      <asp:GridView ID="titlesGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="titlesGridView_SelectedIndexChanged" OnRowCommand="titlesGridView_RowCommand">
+      <asp:GridView ID="titlesGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"  OnRowCommand="titlesGridView_RowCommand" PageSize="4" OnSelectedIndexChanged="titlesGridView_SelectedIndexChanged">
          <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
           <Columns>
               <asp:ButtonField Text="Add To Cart" CommandName="Add To Cart" />

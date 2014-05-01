@@ -73,7 +73,7 @@
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
                     <asp:Button ID="submitButton" runat="server" OnClick="submitButton_Click" Text="Submit" />
-                    <asp:GridView ID="messagesGridView" runat="server" AutoGenerateColumns="False" CellPadding="4" CssClass="gridViewWidth" DataKeyNames="MessageID" DataSourceID="messageEntityDataSource" ForeColor="#333333" GridLines="None" Height="273px" Width="515px">
+                    <asp:GridView ID="messagesGridView" runat="server" AutoGenerateColumns="False" CellPadding="4" CssClass="gridViewWidth" DataKeyNames="MessageID" DataSourceID="messageEntityDataSource" ForeColor="#333333" GridLines="None" Height="273px" Width="515px" AllowPaging="True" PageSize="4">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                             <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />

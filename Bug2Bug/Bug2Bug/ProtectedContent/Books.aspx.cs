@@ -83,10 +83,13 @@ namespace Bug2Bug.ProtectedContent
               // Do what ever you want.
           }
       }
+
       protected void titlesGridView_SelectedIndexChanged(object sender, EventArgs e)
       {
+         // titlesGridView.DataBind();
+      }
 
-      } // end method authorsDropDownList_SelectedIndexChanged
+  
    } // end class Books
 } // end namespace Bug2Bug.ProtectedContent
 

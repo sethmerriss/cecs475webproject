@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Bug2Bug.RESTXMLService.AuthorsRESTXMLService" CodeBehind="AuthorsRESTXMLService.svc.cs" %>
