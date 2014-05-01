@@ -7,11 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Bug2Bug
-{
-
-   public partial class About
-   {
-
-   }
+namespace Bug2Bug {
+    
+    
+    public partial class About {
+        
+        /// <summary>
+        /// AdRotator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.AdRotator AdRotator1;
+        
+        /// <summary>
+        /// Adverts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.XmlDataSource Adverts;
+    }
 }

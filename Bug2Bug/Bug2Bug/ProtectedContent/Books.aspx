@@ -4,13 +4,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
    </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-   <p>
+    <p>
       Select author:&nbsp;
       <asp:DropDownList ID="authorsDropDownList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="authorsDropDownList_SelectedIndexChanged">
       </asp:DropDownList>
    </p>
 <p>
-      <asp:GridView ID="titlesGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="titlesGridView_SelectedIndexChanged">
+      <asp:Label ID="Test" runat="server" Text="Label"></asp:Label>
+      <asp:GridView ID="titlesGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="titlesGridView_SelectedIndexChanged" OnRowCommand="titlesGridView_RowCommand">
          <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
           <Columns>
               <asp:ButtonField Text="Add To Cart" CommandName="Add To Cart" />
@@ -29,5 +30,6 @@
       </asp:GridView>
    </p>
    <p>
-      &nbsp;</p>
+       <asp:Button ID="Button1" runat="server" PostBackUrl="~/Order.aspx" Text="Done" />
+    </p>
 </asp:Content>

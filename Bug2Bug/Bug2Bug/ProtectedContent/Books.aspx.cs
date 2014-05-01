@@ -67,14 +67,17 @@ namespace Bug2Bug.ProtectedContent
          titlesGridView.DataBind(); // displays query results  
       }
 
-      protected void grdtest_RowCommand(object sender, GridViewCommandEventArgs e)
+      protected void titlesGridView_RowCommand(object sender, GridViewCommandEventArgs e)
       {
           if (e.CommandName == "Add To Cart")
           {
-              int Index = Convert.ToInt32(e.CommandArgument);
+              int Index = Convert.ToInt32(e.CommandArgument.ToString());
+              //int id;
               GridViewRow row = titlesGridView.Rows[Index];
-              int id = Convert.ToInt32(row.Cells[0].Text);
+              Test.Text = row.Cells[1].Text;
+              //id = 1;
               Session["row"] = row;
+              Response.Redirect("~/AddToCart.aspx");
               //if you want to select the text of different cells like `coursename` and `coursecode` then assign their cell number,it always start from 0.
               // Now you have the data of selected row.
               // Do what ever you want.

@@ -14,13 +14,14 @@ namespace Bug2Bug
         protected void Page_Load(object sender, EventArgs e)
         {
             GridViewRow row = (GridViewRow) Session["row"];
-            string rawId = Request.QueryString["ProductID"];
-            int productId = int.Parse(row.Cells[0].Text);
-            if (!String.IsNullOrEmpty(rawId) && int.TryParse(rawId, out productId))
+            string rawId = row.Cells[1].Text.ToString(); //Request.QueryString["ProductID"];
+            int productId = Convert.ToInt32(rawId);
+            if (!String.IsNullOrEmpty(rawId)) //&& int.TryParse(rawId, out productId))
             {
                 using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
                 {
-                    usersShoppingCart.AddToCart(Convert.ToInt16(rawId));
+                    Test2.Text = productId.ToString();
+                    usersShoppingCart.AddToCart(productId);
                 }
 
             }
@@ -29,7 +30,7 @@ namespace Bug2Bug
                 Debug.Fail("ERROR : We should never get to AddToCart.aspx without a ProductId.");
                 throw new Exception("ERROR : It is illegal to load AddToCart.aspx without setting a ProductId.");
             }
-            Response.Redirect("Books.aspx");
+            Response.Redirect("~/ProtectedContent/Books.aspx");
         }
     }
 }

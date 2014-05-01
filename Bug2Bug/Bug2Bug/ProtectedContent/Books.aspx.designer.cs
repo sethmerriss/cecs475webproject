@@ -22,6 +22,15 @@ namespace Bug2Bug.ProtectedContent {
         protected global::System.Web.UI.WebControls.DropDownList authorsDropDownList;
         
         /// <summary>
+        /// Test control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Test;
+        
+        /// <summary>
         /// titlesGridView control.
         /// </summary>
         /// <remarks>
@@ -29,5 +38,14 @@ namespace Bug2Bug.ProtectedContent {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView titlesGridView;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

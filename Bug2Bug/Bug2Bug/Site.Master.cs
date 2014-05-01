@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+//using System.Linq;
+using Bug2Bug.Models;
 
 namespace Bug2Bug
 {
@@ -68,6 +70,13 @@ namespace Bug2Bug
       protected void Page_Load(object sender, EventArgs e)
       {
 
+      }
+
+      public IQueryable<Product> GetProducts()
+      {
+          var _db = new Bug2Bug.Models.ProductContext();
+          IQueryable<Product> query = _db.Products;
+          return query;
       }
    }
 }

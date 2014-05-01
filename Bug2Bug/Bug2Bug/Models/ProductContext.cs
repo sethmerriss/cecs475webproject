@@ -8,10 +8,11 @@ namespace Bug2Bug.Models
 {
     public class ProductContext : DbContext
     {
-        /*public ProductContext()
+        public ProductContext()
             : base("Bug2Bug")
         {
-        }*/
+            //Database.SetInitializer<ProductContext>(null);
+        }
 
         //public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }

@@ -9,6 +9,10 @@
     <article>
         <p>        
             This database-driven example demonstrates how to use the ASP.NET Web Forms Application template and how to password protect portions of your site.</p>
+        <p style="height: 295px; width: 725px">        
+            <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="Adverts" />
+            <asp:XmlDataSource ID="Adverts" runat="server" DataFile="~/Adverts.xml"></asp:XmlDataSource>
+        </p>
     </article>
 
     <aside>
