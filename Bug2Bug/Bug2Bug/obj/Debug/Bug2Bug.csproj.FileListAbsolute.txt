@@ -143,6 +143,10 @@ C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\DotNet
 C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\DotNetOpenAuth.AspNet.xml
 C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\Microsoft.AspNet.Membership.OpenAuth.xml
 C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\Microsoft.AspNet.FriendlyUrls.xml
+<<<<<<< HEAD
+=======
+C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\obj\Debug\Bug2Bug.csprojResolveAssemblyReference.cache
+>>>>>>> c81ede5dc4aa2e18ab4e121170430e5cf970929f
 C:\Users\Seth.Merriss\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\Bug2Bug.dll
 C:\Users\Seth.Merriss\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\Bug2Bug.pdb
 C:\Users\Seth.Merriss\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\Antlr3.Runtime.dll
@@ -176,6 +180,7 @@ C:\Users\Seth.Merriss\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\Mic
 C:\Users\Seth.Merriss\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\obj\Debug\Bug2Bug.csprojResolveAssemblyReference.cache
 C:\Users\Seth.Merriss\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\obj\Debug\Bug2Bug.dll
 C:\Users\Seth.Merriss\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\obj\Debug\Bug2Bug.pdb
+<<<<<<< HEAD
 C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\EntityFramework.SqlServer.dll
 C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\Microsoft.AspNet.Identity.Core.dll
 C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\Microsoft.AspNet.Identity.EntityFramework.dll
@@ -218,3 +223,5 @@ C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\ko\Mic
 C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\ru\Microsoft.Data.Edm.resources.dll
 C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
 C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+=======
+>>>>>>> c81ede5dc4aa2e18ab4e121170430e5cf970929f
