@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Net.Http;
 using System.Xml.Linq;
+using System.Windows.Forms;
 
 namespace Bug2Bug.AuthorsRESTXMLService
 {
@@ -24,8 +25,8 @@ namespace Bug2Bug.AuthorsRESTXMLService
                 //send request to AuthorRESTXMLService if fields are filled
                 HttpResponseMessage response =
                     await client.GetAsync(new Uri(
-                        "http://localhost:52163/AuthorsRESTXMLService.svc/AddAuthor/"
-                        ____________________________));
+                        "http://localhost:52430/AuthorsRESTXMLService.svc/AddAuthor/" 
+                        + resultsTextBox.Text));
 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                     resultsTextBox.Text = "Entry added successfully";
@@ -37,8 +38,8 @@ namespace Bug2Bug.AuthorsRESTXMLService
             //Search authors by last name
             {
                 String result = await client.GetStringAsync(new Uri(
-                    "http://localhost:52163/ AuthorsRESTXMLService.svc /GetAuthors/"
-                    ____________________________));
+                    "http://localhost:52430/ AuthorsRESTXMLService.svc /GetAuthors/"
+                    + resultsTextBox.Text));
 
                 XDocument xmlResponse = XDocument.Parse(result); //parse the returned XML string
 
