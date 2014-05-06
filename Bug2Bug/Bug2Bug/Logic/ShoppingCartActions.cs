@@ -117,7 +117,7 @@ namespace Bug2Bug.Logic
                         // Iterate through all rows within shopping cart list
                         for (int i = 0; i < CartItemCount; i++)
                         {
-                            if (cartItem.Product.ProductId == CartItemUpdates[i].ProductId)
+                            if (cartItem.Product.ProductISBN == CartItemUpdates[i].ProductId)
                             {
                                 if (CartItemUpdates[i].PurchaseQuantity < 1 || CartItemUpdates[i].RemoveItem == true)
                                 {

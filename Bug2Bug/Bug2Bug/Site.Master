@@ -67,6 +67,7 @@
                         <li><a id="A1" runat="server" href="~/ProtectedContent/Books">Books</a></li>
                         <li><a id="A3" runat="server" href="~/Guestbook">Guestbook</a></li>
                         <li><a id="A4" runat="server" href="~/Order.aspx">Shopping Cart</a></li>
+                        <li><a id="A5" runat="server" href="~/AuthorClient.aspx">Author Web Service</a></li>
                         <li><a id="A2" runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>

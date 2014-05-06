@@ -211,6 +211,7 @@
     <Content Include="App_Data\Guestbook_log.ldf">
       <DependentUpon>Guestbook.mdf</DependentUpon>
     </Content>
+    <Content Include="AuthorClient.aspx" />
     <Content Include="AuthorsRESTXMLService\AuthorsRESTXMLService.svc" />
     <Content Include="bug2bug.png" />
     <Content Include="Checkout.aspx" />
@@ -421,8 +422,12 @@
     <Compile Include="Author.cs">
       <DependentUpon>BooksModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="AuthorsRESTXMLService\AuthorClient.cs">
+    <Compile Include="AuthorClient.aspx.cs">
+      <DependentUpon>AuthorClient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuthorClient.aspx.designer.cs">
+      <DependentUpon>AuthorClient.aspx</DependentUpon>
     </Compile>
     <Compile Include="AuthorsRESTXMLService\AuthorEntry.cs" />
     <Compile Include="AuthorsRESTXMLService\AuthorsRESTXMLService.svc.cs">

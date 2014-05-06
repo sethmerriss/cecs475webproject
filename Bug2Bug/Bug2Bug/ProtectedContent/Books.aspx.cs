@@ -84,14 +84,47 @@ namespace Bug2Bug.ProtectedContent
           }
       }
 
-      protected void titlesGridView_SelectedIndexChanged(object sender, EventArgs e)
+      protected void titlesGridView_SelectedIndexChanging(object sender, EventArgs e)
       {
-         
+          dbcontext.Authors.Load(); // load Authors table into memory
+
+          // use LINQ to get Author object for the selected author
+          Author selectedAuthor =
+             (from author in dbcontext.Authors.Local
+              where author.AuthorID ==
+                 Convert.ToInt32(authorsDropDownList.SelectedValue)
+              select author).First();
+
+          // query to get books for the selected author
+          var titlesQuery =
+             from book in selectedAuthor.Titles
+             orderby book.Title1
+             select book;
+
+          // set titlesQuery as the titlesGridView's data source
+          titlesGridView.DataSource = titlesQuery.Distinct().ToList();
          titlesGridView.DataBind();
       }
 
       protected void titlesGridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
       {
+          dbcontext.Authors.Load(); // load Authors table into memory
+
+          // use LINQ to get Author object for the selected author
+          Author selectedAuthor =
+             (from author in dbcontext.Authors.Local
+              where author.AuthorID ==
+                 Convert.ToInt32(authorsDropDownList.SelectedValue)
+              select author).First();
+
+          // query to get books for the selected author
+          var titlesQuery =
+             from book in selectedAuthor.Titles
+             orderby book.Title1
+             select book;
+
+          // set titlesQuery as the titlesGridView's data source
+          titlesGridView.DataSource = titlesQuery.Distinct().ToList();
           titlesGridView.PageIndex = e.NewPageIndex;
           titlesGridView.DataBind();
       }

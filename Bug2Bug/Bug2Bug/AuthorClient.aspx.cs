@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Net.Http;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 using System.Xml.Linq;
-using System.Windows.Forms;
+using System.Net.Http;
 
-namespace Bug2Bug.AuthorsRESTXMLService
+namespace Bug2Bug
 {
     public partial class AuthorClient : System.Web.UI.Page
     {
@@ -52,7 +53,7 @@ namespace Bug2Bug.AuthorsRESTXMLService
                     //print informatino for each phone book entry
                     foreach (XElement element in xmlResponse.Element(xmlNamespace + "ArrayOfAuthorEntry").Elements())
                     {
-                        element.Element(xmlNamespace + "LastName").Value,
+                        resultsTextBox.Text = element.Element(xmlNamespace + "LastName").Value;
                     }
                 }//end else
             }//end if
@@ -60,6 +61,7 @@ namespace Bug2Bug.AuthorsRESTXMLService
 
         private void clearFields()
         {
+
             resultsTextBox.Text = string.Empty;
             firstTextBox.Text = string.Empty;
             lastTextBox.Text = string.Empty;
