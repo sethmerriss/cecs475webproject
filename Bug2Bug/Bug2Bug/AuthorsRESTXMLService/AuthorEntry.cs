@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
+using System.Linq;
+using System.Web;
 
 namespace Bug2Bug.AuthorsRESTXMLService
 {
@@ -22,6 +22,5 @@ namespace Bug2Bug.AuthorsRESTXMLService
         {
             return LastName + ", " + FirstName;
         }
-
     }
 }

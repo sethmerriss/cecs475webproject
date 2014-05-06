@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Net.Http;
-using System.Xml.Linq
+using System.Xml.Linq;
 
 namespace Bug2Bug.AuthorsRESTXMLService
 {
@@ -13,7 +13,7 @@ namespace Bug2Bug.AuthorsRESTXMLService
         private HttpClient client = new HttpClient();
 
         //namespace of the XML response
-        private XNamespace xmlNamespace = 
+        private XNamespace xmlNamespace =
             XNamespace.Get("http://schemas.datacontract.org/2004/07/ AuthorRESTXMLService ");
 
         //handle page load events

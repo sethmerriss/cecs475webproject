@@ -11,7 +11,7 @@
    </p>
 <p>
       <asp:Label ID="Test" runat="server" Text="Label"></asp:Label>
-      <asp:GridView ID="titlesGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"  OnRowCommand="titlesGridView_RowCommand" PageSize="4" OnSelectedIndexChanged="titlesGridView_SelectedIndexChanged" AllowPaging="True" OnPageIndexChanging="titlesGridView_PageIndexChanging">
+      <asp:GridView ID="titlesGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"  OnRowCommand="titlesGridView_RowCommand" PageSize="4" OnSelectedIndexChanged="titlesGridView_SelectedIndexChanged" AllowPaging="True" OnPageIndexChanging="titlesGridView_PageIndexChanging" OnSelectedIndexChanging="titlesGridView_SelectedIndexChanging">
          <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
           <Columns>
               <asp:ButtonField Text="Add To Cart" CommandName="Add To Cart" />
