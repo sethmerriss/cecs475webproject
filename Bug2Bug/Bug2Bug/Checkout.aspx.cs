@@ -44,7 +44,12 @@ namespace Bug2Bug
 
         protected void CheckoutBtn_Click(object sender, EventArgs e)
         {
-
+            Session["total"] = lblTotal.Text;
+            using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
+            {
+                usersShoppingCart.EmptyCart();
+            }
+            Response.Redirect("~/Final.aspx");
         }
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)

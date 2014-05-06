@@ -33,7 +33,7 @@
     <br />
     <asp:Label ID="Label1" runat="server" Text="Payment Type: "></asp:Label>
     <br />
-    <asp:DropDownList ID="DropDownList1" runat="server">
+    <asp:DropDownList ID="CCTypeList" runat="server">
         <asp:ListItem>Visa</asp:ListItem>
         <asp:ListItem>Mastercard</asp:ListItem>
         <asp:ListItem>American Express</asp:ListItem>
@@ -43,22 +43,34 @@
     <br />
     <asp:Label ID="Label2" runat="server" Text="Card Number: "></asp:Label>
     <br />
-    <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged" Width="170px"></asp:TextBox>
+    <asp:TextBox ID="CCNumField" runat="server" OnTextChanged="TextBox1_TextChanged" Width="170px"></asp:TextBox>
+    <br />
+    <asp:RequiredFieldValidator ID="CCReqValidator" runat="server" ControlToValidate="CCNumField" ErrorMessage="Card Number is a required field. "></asp:RequiredFieldValidator>
+    <br />
+    <asp:RegularExpressionValidator ID="CCValidator" runat="server" ControlToValidate="CCNumField" ErrorMessage="Card Number must be a 16 digit number or 15 digits for American Express." ValidationExpression="\b(?:3[47]\d|(?:4\d|5[1-5]|65)\d{2}|6011)\d{12}\b"></asp:RegularExpressionValidator>
     <br />
     <br />
     <asp:Label ID="Label3" runat="server" Text="Security Code:"></asp:Label>
     <br />
-    <asp:TextBox ID="TextBox2" runat="server" Width="77px"></asp:TextBox>
+    <asp:TextBox ID="CVVCodeBox" runat="server" Width="77px"></asp:TextBox>
+    <br />
+    <asp:RequiredFieldValidator ID="CVVReqValidator" runat="server" ControlToValidate="CVVCodeBox" ErrorMessage="Security Code is a required field."></asp:RequiredFieldValidator>
+    <br />
+    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="CVVCodeBox" ErrorMessage="The security code is 4 digits. If your code is three digits, add a leading 0." ValidationExpression="[0-9][0-9][0-9][0-9]"></asp:RegularExpressionValidator>
     <br />
     <br />
     Billing Address:<br />
     <br />
-    <asp:TextBox ID="TextBox3" runat="server" Height="57px" Width="214px"></asp:TextBox>
+    <asp:TextBox ID="AddressField" runat="server" Height="79px" Width="214px"></asp:TextBox>
+    <br />
+    <asp:RequiredFieldValidator ID="AddressValidator" runat="server" ControlToValidate="AddressField" ErrorMessage="Billing Address is a required field. "></asp:RequiredFieldValidator>
+    <br />
+    <br />
     <table> 
     <tr>
       <td>
-        <asp:Button ID="CheckoutBtn" runat="server" Text="Checkout" OnClick="CheckoutBtn_Click" />
           <br />
+        <asp:Button ID="CheckoutBtn" runat="server" Text="Checkout" OnClick="CheckoutBtn_Click" />
           <br />
       </td>
     </tr>

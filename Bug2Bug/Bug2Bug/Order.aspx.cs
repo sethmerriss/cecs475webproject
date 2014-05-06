@@ -52,7 +52,7 @@ namespace Bug2Bug
                 {
                     IOrderedDictionary rowValues = new OrderedDictionary();
                     rowValues = GetValues(CartList.Rows[i]);
-                    cartUpdates[i].ProductId = Convert.ToInt32(rowValues["ProductID"]);
+                    cartUpdates[i].ProductId = Convert.ToInt32(rowValues["Product.ProductISBN"]);
 
                     CheckBox cbRemove = new CheckBox();
                     cbRemove = (CheckBox)CartList.Rows[i].FindControl("Remove");
@@ -93,11 +93,6 @@ namespace Bug2Bug
             
             using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
             {
-                List<CartItem> cartItems = new List<CartItem>();
-                cartItems = usersShoppingCart.GetCartItems();
-                Session["cartItems"] = cartItems;
-                Session["orderTotal"] = LabelTotalText.Text;
-
                 Response.Redirect("~/Checkout.aspx");
             }
         }

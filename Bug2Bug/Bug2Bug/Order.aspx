@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="Bug2Bug.ShoppingCart" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="ShoppingCartTitle" runat="server" class="ContentHead"><h1>Shopping Cart</h1></div>
+    <div id="ShoppingCartTitle" runat="server" class="ContentHead"><h1>Shopping Cart</h1>
+        <p>&nbsp;</p></div>
     <asp:GridView ID="CartList" runat="server" AutoGenerateColumns="False" ShowFooter="True" GridLines="Vertical" CellPadding="4"
         ItemType="Bug2Bug.Models.CartItem" SelectMethod="GetShoppingCartItems" 
         CssClass="table table-striped table-bordered" >   
         <Columns>
-        <asp:BoundField DataField="ProductId" HeaderText="ID" SortExpression="ProductId" />
         <asp:BoundField DataField="Product.ProductISBN" HeaderText="ISBN" SortExpression="ProductISBN" />        
         <asp:BoundField DataField="Product.ProductName" HeaderText="Name" />        
         <asp:BoundField DataField="Product.UnitPrice" HeaderText="Price (each)" DataFormatString="{0:c}"/>     
