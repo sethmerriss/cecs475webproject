@@ -209,6 +209,7 @@
     <Content Include="App_Data\Guestbook_log.ldf">
       <DependentUpon>Guestbook.mdf</DependentUpon>
     </Content>
+    <Content Include="AuthorsRESTXMLService\AtuhorsRESTXMLService.asmx" />
     <Content Include="bug2bug.png" />
     <Content Include="Checkout.aspx" />
     <Content Include="Contact.aspx" />
@@ -267,6 +268,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Final.aspx" />
     <Content Include="Guestbook.aspx" />
     <Content Include="HtmlPage1.html" />
     <Content Include="Images\accent.png" />
@@ -324,8 +326,6 @@
     </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="ProtectedContent\Books.aspx" />
-    <Content Include="RESTXMLService\AuthorsRESTXMLService.asmx" />
-    <Content Include="RESTXMLService\AuthorsRESTXMLService.svc" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
@@ -419,6 +419,10 @@
     <Compile Include="Author.cs">
       <DependentUpon>BooksModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="AuthorsRESTXMLService\AtuhorsRESTXMLService.asmx.cs">
+      <DependentUpon>AtuhorsRESTXMLService.asmx</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorsRESTXMLService\AuthorEntry.cs" />
     <Compile Include="BooksModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -454,6 +458,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Final.aspx.cs">
+      <DependentUpon>Final.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Final.aspx.designer.cs">
+      <DependentUpon>Final.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -493,7 +504,6 @@
     <Compile Include="Models\ProductDatabaseInitializer.cs" />
     <Compile Include="Order.aspx.cs">
       <DependentUpon>Order.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Order.aspx.designer.cs">
       <DependentUpon>Order.aspx</DependentUpon>
@@ -506,13 +516,7 @@
     <Compile Include="ProtectedContent\Books.aspx.designer.cs">
       <DependentUpon>Books.aspx</DependentUpon>
     </Compile>
-    <Compile Include="RESTXMLService\AuthorsRESTXMLService.asmx.cs">
-      <DependentUpon>AuthorsRESTXMLService.asmx</DependentUpon>
-    </Compile>
-    <Compile Include="RESTXMLService\AuthorsRESTXMLService.svc.cs">
-      <DependentUpon>AuthorsRESTXMLService.svc</DependentUpon>
-    </Compile>
-    <Compile Include="RESTXMLService\IAuthorsRESTXMLService.cs" />
+    <Compile Include="AuthorsRESTXMLService\IAuthorsRESTXMLService.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

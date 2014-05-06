@@ -4,35 +4,35 @@ using System.Linq;
 using System.Web;
 using System.Web.Services;
 
-namespace Bug2Bug.RESTXMLService
+namespace Bug2Bug.AuthorsRESTXMLService
 {
     public class AuthorsRESTXMLService : IAuthorsRESTXMLService
     {
         private BooksEntities dbcontext = new BooksEntities();
 
-        public void AddAuthor(string fname, string lname)
+        public void AddEntry(string fname, string lname)
         {
             AuthorEntry author = new AuthorEntry();
             {
-                FirstName = fname;
-                LastName = lname;
-
+                author.FirstName = fname;
+                author.LastName = lname;
             };
 
-            dbcontext.Authors.Add(author);
+            //dbcontext.Authors.Add(AuthorEntry);
             dbcontext.SaveChanges();
-            
+
         }
 
         public AuthorEntry[] GetAuthors(string lastName)
         {
             var matchingEntries = 
-                from Authors in dbcontext.Authors
-                where lastName == Authors.LastName.ToString()
+                from Author in dbcontext.Authors
+                where lastName == Author.LastName   
                 select new AuthorEntry{
                     LastName = lastName,
-                    FirstName = something,
-        };
+                    FirstName = Author.FirstName,
+                };
+
             return matchingEntries.ToArray();
     }
     }

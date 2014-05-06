@@ -63,7 +63,7 @@ namespace Bug2Bug.ProtectedContent
             select book;
 
          // set titlesQuery as the titlesGridView's data source
-         titlesGridView.DataSource = titlesQuery;
+         titlesGridView.DataSource = titlesQuery.Distinct().ToList();
          titlesGridView.DataBind(); // displays query results  
       }
 
@@ -86,7 +86,14 @@ namespace Bug2Bug.ProtectedContent
 
       protected void titlesGridView_SelectedIndexChanged(object sender, EventArgs e)
       {
-         // titlesGridView.DataBind();
+         
+         titlesGridView.DataBind();
+      }
+
+      protected void titlesGridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
+      {
+          titlesGridView.PageIndex = e.NewPageIndex;
+          titlesGridView.DataBind();
       }
 
   
