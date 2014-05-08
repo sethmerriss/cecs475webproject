@@ -59,12 +59,24 @@ namespace Bug2Bug {
         
         /// <summary>
         /// A2 control.
+<<<<<<< HEAD
+=======
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor A2;
+        
+        /// <summary>
+        /// A5 control.
+>>>>>>> 839621409effb87d9c45708ca3acdb2f4ada1ec3
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor A5;
         
         /// <summary>
         /// FeaturedContent control.

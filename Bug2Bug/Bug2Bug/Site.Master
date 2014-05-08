@@ -40,7 +40,7 @@
         <div class="content-wrapper">
             <div class="float-left">
                 <p class="site-title">
-                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/bug2bug.png" />
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/world.png" Height="100px" Width="100px" />
                 </p>
             </div>
             <div class="float-right">
@@ -68,6 +68,7 @@
                         <li><a id="A3" runat="server" href="~/Guestbook">Guestbook</a></li>
                         <li><a id="A4" runat="server" href="~/Order.aspx">Shopping Cart</a></li>
                         <li><a id="A2" runat="server" href="~/About">About</a></li>
+                        <li><a id="A5" runat="server" href="~/ProtectedContent/AuthorClient.aspx">REST Service</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
                 </nav>

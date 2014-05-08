@@ -212,6 +212,7 @@
       <DependentUpon>Guestbook.mdf</DependentUpon>
     </Content>
     <Content Include="AuthorClient.aspx" />
+    <Content Include="ProtectedContent\AuthorClient.aspx" />
     <Content Include="AuthorsWCFService.svc" />
     <Content Include="bug2bug.png" />
     <Content Include="Checkout.aspx" />
@@ -424,10 +425,11 @@
     </Compile>
     <Compile Include="App_Code\AuthorEntry.cs" />
     <Compile Include="AuthorClient.aspx.cs">
+    <Compile Include="ProtectedContent\AuthorClient.aspx.cs">
       <DependentUpon>AuthorClient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AuthorClient.aspx.designer.cs">
+    <Compile Include="ProtectedContent\AuthorClient.aspx.designer.cs">
       <DependentUpon>AuthorClient.aspx</DependentUpon>
     </Compile>
     <Compile Include="AuthorsWCFService.svc.cs">
