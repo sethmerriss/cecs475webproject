@@ -69,7 +69,6 @@ namespace Bug2Bug
 
       protected void Page_Load(object sender, EventArgs e)
       {
-
       }
 
       public IQueryable<Product> GetProducts()

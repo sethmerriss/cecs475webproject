@@ -7,6 +7,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Data.Entity;
 using Bug2Bug.Models;
+using Bug2Bug.Logic;
 
 namespace Bug2Bug
 {
