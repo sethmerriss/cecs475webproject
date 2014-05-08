@@ -70,7 +70,6 @@ C:\Users\Seth.Merriss\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\ko\
 C:\Users\Seth.Merriss\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\ru\Microsoft.Data.Edm.resources.dll
 C:\Users\Seth.Merriss\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
 C:\Users\Seth.Merriss\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
-C:\Users\Seth.Merriss\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\obj\Debug\Bug2Bug.csprojResolveAssemblyReference.cache
 C:\Users\Seth.Merriss\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\obj\Debug\Bug2Bug.dll
 C:\Users\Seth.Merriss\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\obj\Debug\Bug2Bug.pdb
 C:\Users\Joaqu_000\Documents\GitHub\cecs475webproject\Bug2Bug\Bug2Bug\bin\Bug2Bug.dll.config

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
-using System.Net.Http;
 
 namespace Bug2Bug
 {
@@ -16,55 +16,66 @@ namespace Bug2Bug
 
         //namespace of the XML response
         private XNamespace xmlNamespace =
-            XNamespace.Get("http://schemas.datacontract.org/2004/07/ AuthorRESTXMLService ");
+            XNamespace.Get("http://schemas.datacontract.org/2004/07/Bug2Bug");
 
-        //handle page load events
-        protected async void Page_Load(object sender, EventArgs e)
+
+        protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack)
+            if (!IsPostBack)
             {
-                //send request to AuthorRESTXMLService if fields are filled
-                HttpResponseMessage response =
-                    await client.GetAsync(new Uri(
-                        "http://localhost:52430/AuthorsRESTXMLService.svc/AddAuthor/" 
-                        + resultsTextBox.Text));
+                clearFields();
+            }
+        }
 
-                if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                    resultsTextBox.Text = "Entry added successfully";
-                else 
-                    resultsTextBox.Text = "AddEntry failed with HTTP code " + 
-                        response.StatusCode;
-            }//end if
+        protected async void GetAuthorButton_Click(object sender, EventArgs e)
+        {
+            resultListBox.Items.Clear();
+            String result = await client.GetStringAsync(new Uri("http://localhost:52430/AuthorsWCFService.svc/GetAuthors/" + findLastTextBox.Text));
 
-            //Search authors by last name
+            XDocument xmlResponse = XDocument.Parse(result); //parse the returned XML string
+
+            //if there are no phone book entries in response
+            if (xmlResponse.Element(xmlNamespace + "ArrayOfAuthorEntry").Value == string.Empty) //Root Element
             {
-                String result = await client.GetStringAsync(new Uri(
-                    "http://localhost:52430/ AuthorsRESTXMLService.svc /GetAuthors/"
-                    + resultsTextBox.Text));
-
-                XDocument xmlResponse = XDocument.Parse(result); //parse the returned XML string
-
-                //if there are no phone book entries in response
-                if (xmlResponse.Element(xmlNamespace + "ArrayOfAuthorEntry").Value == string.Empty) //Root Element
+                resultListBox.Items.Add("Not found");
+            }
+            else
+            {
+                //print informatino for each phone book entry
+                foreach (XElement element in xmlResponse.Element(xmlNamespace + "ArrayOfAuthorEntry").Elements())
                 {
+                    resultListBox.Items.Add(element.Element(xmlNamespace + "FirstName").Value +" "+ element.Element(xmlNamespace + "LastName").Value);
                 }
-                else 
-                {
-                    //print informatino for each phone book entry
-                    foreach (XElement element in xmlResponse.Element(xmlNamespace + "ArrayOfAuthorEntry").Elements())
-                    {
-                        resultsTextBox.Text = element.Element(xmlNamespace + "LastName").Value;
-                    }
-                }//end else
-            }//end if
+            }//end else
+        }
+
+        protected async void AddAuthorButton_Click(object sender, EventArgs e)
+        {
+            //send request to AuthorRESTXMLService if fields are filled
+            resultListBox.Items.Clear();
+            HttpResponseMessage response =
+                await client.GetAsync(new Uri(
+                    "http://localhost:52430/AuthorsWCFService.svc/AddAuthor/"
+                    + firstTextBox.Text + "/" +lastTextBox.Text));
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                resultListBox.Items.Add("Entry added successfully");
+            else
+                resultListBox.Items.Add("AddEntry failed with HTTP code " + response.StatusCode);
+        }
+
+        protected void btnclear_Click(object sender, EventArgs e)
+        {
+            clearFields();
         }
 
         private void clearFields()
         {
-
-            resultsTextBox.Text = string.Empty;
+            resultListBox.Items.Clear();
             firstTextBox.Text = string.Empty;
             lastTextBox.Text = string.Empty;
+            phoneTextBox.Text = string.Empty;
+            findLastTextBox.Text = string.Empty;
         }
     }
 }

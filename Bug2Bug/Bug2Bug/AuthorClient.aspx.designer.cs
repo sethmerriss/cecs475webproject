@@ -121,12 +121,21 @@ namespace Bug2Bug {
         protected global::System.Web.UI.WebControls.Button GetAuthorButton;
         
         /// <summary>
-        /// resultsTextBox control.
+        /// btnclear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox resultsTextBox;
+        protected global::System.Web.UI.WebControls.Button btnclear;
+        
+        /// <summary>
+        /// resultListBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox resultListBox;
     }
 }

@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 using System.Linq;
 using System.Web;
 
-namespace Bug2Bug.AuthorsRESTXMLService
+namespace Bug2Bug
 {
     [DataContract]
     public class AuthorEntry
